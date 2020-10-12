@@ -1,6 +1,7 @@
 Feature: Selenium Commands
   Scenario: Get Commands in Selenium
     Given I navigate to blueskycitadelform site
+    And I wait for the pop-up button and close it when it appears
     And I refresh the page
     And I get the url title
     And I get the url of the page

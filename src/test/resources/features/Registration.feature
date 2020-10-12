@@ -4,6 +4,7 @@ Feature: Registration
   #1. WITHOUT using the parameterisation ""
   Scenario: BlueSky Citadel Registration
     Given I navigate to blueskycitadelform site
+   #And I wait for the pop-up button and close it when it appears
     And I click on Login/Register
     And I click on Register now
     When I enter the username
@@ -17,8 +18,6 @@ Feature: Registration
 #  #1. using the parameterisation ""
   Scenario: Invalid email address
     Given I navigate to blueskycitadelform site
-    #And I want for popus to appear
-    #And I click on the close button
     And I click on Login/Register
     And I click on Register now
     When I enter the username "MYUSERNAMETEST"

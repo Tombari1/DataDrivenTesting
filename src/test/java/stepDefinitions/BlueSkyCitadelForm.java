@@ -8,7 +8,11 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+
 
 public class BlueSkyCitadelForm {
      WebDriver driver;
@@ -258,8 +262,18 @@ public class BlueSkyCitadelForm {
        // Assert.assertTrue(errorMessage == message);
        // errorMessage.contains("Please enter a valid email address.");
       //  errorMessage.equals("Please enter a valid email address.");
-      //  Assert.assertEquals(errorMessage, "Please enter a valid email address.");
+       // Assert.assertEquals(errorMessage, "Please enter a valid email address.");
         Assert.assertEquals(errorMessage, message);
 
     }
+
+    @And("^I wait for the pop-up button and close it when it appears$")
+    public void iClickOnTheCloseButton() {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(".pum-close"))).click();
+
+
+    }
+
+
 }

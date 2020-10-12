@@ -15,5 +15,5 @@ Feature: Registration With Scenario Outline
     Examples:
       | USERNAME       | EMAILADDRESS   | PASSWORD         | CONFIRMPASSWORD |
       | MYUSERNAMETEST | EMAIL@TEST.COM | mysecurepassword | mysecure        |
-      | MYUSERNAMETEST | EMAIL@TEST | mysecurepassword | mysecurepassword        |
+      | MYUSERNAMETEST | EMAIL@TEST | mysecurepassword | mysecurepassword      |
       | 12345 | EMAIL@TEST.COM | mysecurepassword | mysecurepassword        |
