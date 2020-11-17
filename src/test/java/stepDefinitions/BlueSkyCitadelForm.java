@@ -262,7 +262,8 @@ public class BlueSkyCitadelForm {
        // Assert.assertTrue(errorMessage == message);
        // errorMessage.contains("Please enter a valid email address.");
       //  errorMessage.equals("Please enter a valid email address.");
-       // Assert.assertEquals(errorMessage, "Please enter a valid email address.");
+
+        Assert.assertEquals(errorMessage, "Please enter a valid email address.");
         Assert.assertEquals(errorMessage, message);
 
     }
